@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="nui://game/ui/jquery.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+     <img id="cursor" src="img/cursor.png">
+<h2>Starling RP Création de votre identité</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button><a href="https://inovacommunity.fr">Rejoindre le Discord</a></button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form id="register">
+			<h1 class="sp-identity">Douane Starling RP</h1>
+			<input id="firstname"  class="form-control" type="text" placeholder="Prénom (commencer par une majuscule)">
+            <input id="lastname" type="text" class="form-control" placeholder="Nom (commencer par une majuscule)">
+            <input id="dateofbirth" type="text" class="form-control unstyled" placeholder="Date de naissance" maxlength="10" oninput="maxLengthCheck(this)">
+            <input id="height" type="number" min="0" step="1" min="48" max="96" maxlength = "2" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)" class="form-control" placeholder="Taille (48-96)" >
+            <div class="checkbox checkbox-style">
+                <input type="checkbox" id="sex1" class="sex"  value="M">
+                <label for="sex1">Homme</label> &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="sex2" class="sex" value="F">
+                <label for="sex2">Femme</label>
+              </div> 
+	<!--	</form> -->
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Bonjour à toi, joueur de Starling RP</h1>
+				<p>Profitez pleinement de votre expérience 😘</p>
+                <button class="ghost" id="submit" type="submit">Créer mon identité</button>
+                <form>
+                <script src="new/js/jquery-3.3.1.js" type="text/javascript"></script>
+                <script src="script.js" type="text/javascript"></script>
+                <script>
+                  $('input[type="checkbox"]').on('change', function() {
+                  $('input[type="checkbox"]').not(this).prop('checked', false);
+                  });
+                  function maxLengthCheck(object) {
+                          if (object.value.length > object.maxLength)
+                            object.value = object.value.slice(0, object.maxLength)
+                        }
+                          
+                        function isNumeric (evt) {
+                          var theEvent = evt || window.event;
+                          var key = theEvent.keyCode || theEvent.which;
+                          key = String.fromCharCode (key);
+                          var regex = /[0-9]|\./;
+                          if ( !regex.test(key) ) {
+                            theEvent.returnValue = false;
+                            if(theEvent.preventDefault) theEvent.preventDefault();
+                          }
+                        }
+        
+                        window.addEventListener('keydown', function(event) {
+                            if (event.keyIdentifier == "Down") {
+                                event.preventDefault()
+                            }
+                        }, false);
+                </script>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
