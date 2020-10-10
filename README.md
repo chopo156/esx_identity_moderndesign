@@ -8,6 +8,6 @@ Credits :
 - <a href="https://www.florin-pop.com/">Florin Pop for the front-end</a>
 -  <a href="http://sinyx.fr/">Sinyx for js debug</a>
 
- ScreenShot of the esx_identity
+ Screenshot of the esx_identity
  
- https://media.discordapp.net/attachments/711906694770327552/764518064011477012/unknown.png
+ https://imgur.com/a/c6Lvwni
